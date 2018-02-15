@@ -1,0 +1,74 @@
+.Page {
+  text-align: center;
+}
+
+.Page-logo {
+  animation: Page-logo-spin 2s linear alternate-reverse infinite;
+  height: 100px;
+}
+
+.Page {
+  margin: 10px;
+	display: grid;
+	grid-gap: 10px;
+	grid-template-areas:
+		"header"
+		"Column"
+		"footer";
+}
+
+.Page-header {
+	grid-area: header;
+  background-color: #28314E;
+}
+
+.Page-Column {
+	grid-area: Column;
+  background-color: #475477;
+
+}
+
+.Page-footer {
+	grid-area: footer;
+  background-color: #28314E;
+}
+
+@media (min-width: 650px) {
+	.Page {
+
+		grid-template-areas:
+			"header "
+      "Column "
+			"footer "
+	}
+}
+
+.Page > * {
+	border: 1px solid #212941;
+	border-radius: 5px;
+	padding: 8px 10px;
+	color: #ffffff;
+	font-size: 18px;
+	font-family: roboto;
+
+}
+
+
+@keyframes Page-logo-spin {
+  from { transform: rotate(30deg); }
+  to { transform: rotate(-30deg); }
+}
+
+.Page-footer h6 {
+  text-align: right;
+}
+
+html{
+  background-color: #e0dbdb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
